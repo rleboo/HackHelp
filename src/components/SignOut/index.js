@@ -1,5 +1,5 @@
 import React from 'react';
-//import { withFirebase } from '../Firebase';
+import { withFirebase } from '../Firebase';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -11,5 +11,4 @@ const SignOutButton = ({ firebase }) => (
     Sign Out
   </Nav.Link>
 );
-export default SignOutButton;
-//export default withFirebase(SignOutButton);
+export default withFirebase(SignOutButton);
