@@ -1,0 +1,17 @@
+@media all and (min-width: 480px) {
+  .EditProfile {
+    padding: 60px 0;
+  }
+
+  .EditProfile form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+.EditProfile .card {
+     margin: 0 auto; /* Added */
+     float: none; /* Added */
+     margin-bottom: 10px; /* Added */
+     width: 25rem;
+   }

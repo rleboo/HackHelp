@@ -1,0 +1,29 @@
+.Jobs{
+  text-align: center;
+  /* border-style: solid; */
+  color: black;
+  left: 2rem;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+  flex-direction: row;
+  height: 100vh;
+  width: 27rem;
+}
+
+.Jobs .card{
+  margin-bottom: .5rem;
+  width: 25rem;
+  margin-left: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Job{
+  margin-bottom: 2px;
+}
+
+.Job:last-child {
+  margin-bottom: 0;
+}
+
+.Job:first-child {
+    margin-top: 0;
+}
