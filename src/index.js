@@ -6,6 +6,7 @@ import './index.css';
 import {BrowserRouter} from 'react-router-dom'
 
 // Noah is awesome
+// Ray is great
 
 import Firebase, { FirebaseContext } from './components/Firebase';
 ReactDOM.render(

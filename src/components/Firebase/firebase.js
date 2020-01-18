@@ -19,10 +19,15 @@ class Firebase {
       app.initializeApp(config);
       this.auth = app.auth();
       this.db = app.database();
+      // Initializes the realtime database
   }
+    // extends the interface for Firebase class with the user entity.
+
+    // doCreateUserWithEmailAndPassword used for user authentication/login
     doCreateUserWithEmailAndPassword = (email, password) =>
 	this.auth.createUserWithEmailAndPassword(email, password);
 
+    // doSignInWithEmailAnd Password used ti
     doSignInWithEmailAndPassword = (email, password) =>
 	this.auth.signInWithEmailAndPassword(email, password);
 

@@ -38,6 +38,7 @@ const NavigationAuth = () => (
         <Nav className="mr-auto">
           <Nav.Link as={Link} to={ROUTES.HOME}>Home</Nav.Link>
           <Nav.Link as={Link} to={ROUTES.PROFILE}>Profile</Nav.Link>
+          <Nav.Link as={Link} to={ROUTES.USERS}>Userlist</Nav.Link>
           <SignOutButton/>
         </Nav>
         <Form inline>

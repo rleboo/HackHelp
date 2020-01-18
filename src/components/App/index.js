@@ -14,6 +14,7 @@ import Login from '../Login/Login.js'
 import EditProfile from '../EditProfile/EditProfile.js'
 import UploadJobs from '../UploadJobs/UploadJobs.js'
 import UserPoints from '../UserPoints/UserPoints.js'
+import UsersPage from '../Users/Users.js'
 import './index.css';
 import * as ROUTES from '../../constants/routes';
 import { Navbar, Button, Form, FormControl, Nav } from 'react-bootstrap';
@@ -56,6 +57,7 @@ class App extends Component{
             <Route exact path='/Signup' component={SignUpPage} />
             <Route exact path='/UploadJobs' component={UploadJobs} />
             <Route exact path='/UserPoints' component={UserPoints} />
+            <Route exact path='/Users' component={UsersPage} />
 
               <Route render={function () {
                 return <p>Not found</p>
