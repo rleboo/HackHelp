@@ -94,7 +94,7 @@ class SignUpFormBase extends Component {
     return (
       <span className="signup">
       <form onSubmit={this.onSubmit}>
-        <FormGroup controlId="email" bsSize="large">
+        <FormGroup controlId="username" bsSize="large">
         <FormLabel>Username</FormLabel>
           <FormControl
           autoFocus
@@ -139,9 +139,10 @@ class SignUpFormBase extends Component {
             />
         </FormGroup>
 
-        <Button disabled={isInvalid} block
+        <Button disabled={isInvalid}
         bsSize="large"
-        type="submit">
+        type="submit"
+        block>
           Sign Up!
         </Button>
 
