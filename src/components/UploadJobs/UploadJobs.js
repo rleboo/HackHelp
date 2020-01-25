@@ -24,7 +24,7 @@ class UploadJobs extends Component {
     this.props.firebase.auth.onAuthStateChanged(function(user) {
       if (user) {
         // Check if its a company or a user
-        return this.props.firebase.job(user.uid).set({
+        return this.props.firebase.jobs().push({
           title, 
           description, 
           location

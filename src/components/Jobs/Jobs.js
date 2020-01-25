@@ -7,24 +7,30 @@ import { withFirebase } from '../Firebase';
 
 class Jobs extends Component{
   constructor(props) {
-  super(props);
-  this.state = {
-    loading: false,
-    filter: data,
-    users: [],
+    super(props);
+
+    this.state = {
+      loading: false,
+      jobs: [],
     };
   }
 
   componentDidMount() {
     this.setState({ loading: true });
-    this.props.firebase.users().on('value', snapshot => {
-      const usersObject = snapshot.val();
-      const usersList = Object.keys(usersObject).map(key => ({
-        ...usersObject[key],
+
+    this.props.firebase.jobs().on('value', snapshot => {
+
+      const jobObject = snapshot.val();
+      console.log(jobObject);
+
+      const jobsList = Object.keys(jobObject).map(key => ({
+        ...jobObject[key],
         uid: key,
       }));
+
       this.setState({
-        users: usersList,
+        jobs: jobsList,
+        //Extracts a JavaScript value from a DataSnapshot.
         loading: false,
       });
     });
@@ -32,35 +38,40 @@ class Jobs extends Component{
 
   componentWillUnmount() {
     this.props.firebase.users().off();
-}
+    // Stop listening once we leave the page?/ Component is about to be destroyed
+  }
 
   render(){
-    const { users, loading } = this.state;
+    const { jobs, loading } = this.state;
+
     return(
       <div>
-      <div className="Jobs">
-      {this.state.filter.map((d) =>
-        <div className = "Job" key={Math.random()}>
-        <Card border="primary">
-          <Card.Body>
-            <Card.Title> {d.title} </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">{d.orgName}</Card.Subtitle>
-            <Card.Text>
-              {d.description}
-            </Card.Text>
-            <Card.Link href="#">Website</Card.Link>
-          </Card.Body>
-        </Card>
+        <div className="Jobs">
+          {loading &&<div> Loading...</div>}
+          <JobList jobs={jobs} />
         </div>
-      )}
-
       </div>
-    </div>
 
     );
   }
 }
 
+const JobList = ({ jobs }) => (
+  <div>
+    {jobs.map(d => 
+      <Card border="primary">
+        <Card.Body>
+          <Card.Title> {d.title} </Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{d.orgName}</Card.Subtitle>
+          <Card.Text>
+            {d.description}
+          </Card.Text>
+          <Card.Link href="#">Website</Card.Link>
+        </Card.Body>
+      </Card>
+      )}
+  </div>
+);
 
 
 export default withFirebase(Jobs);
