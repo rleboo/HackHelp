@@ -7,3 +7,4 @@ export const PROFILE = '/Profile';
 export const SIGNOUT = '/SignOut';
 export const USERS = '/Users';
 export const NEW_JOB = '/Jobs'; 
+export const ORG_SIGN_UP = '/orgsignup';

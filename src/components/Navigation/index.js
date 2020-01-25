@@ -36,7 +36,6 @@ const NavigationAuth = () => (
     <Navbar.Brand as={Link} to={ROUTES.HOME}>HelpMe</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link as={Link} to={ROUTES.PROFILE}>Profile</Nav.Link>
-          <Nav.Link as={Link} to={ROUTES.USERS}>Userlist</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
