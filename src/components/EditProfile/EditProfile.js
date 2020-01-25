@@ -31,6 +31,7 @@ class EditProfile extends Component {
     this.props.firebase.auth.onAuthStateChanged(function(user) {
       if (user) {
         //Get the logged-in user
+        //TODO: Only update valid items 
         return this.props.firebase.user(user.uid).update({
           description, 
           gender, 
