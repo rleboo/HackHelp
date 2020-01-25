@@ -81,6 +81,8 @@ class EditProfile extends Component {
         <FormLabel>Description:</FormLabel>
           <FormControl
           autoFocus
+          as = "textarea"
+          rows = "3"
           name="description"
           value={description}
           onChange={this.onChange}

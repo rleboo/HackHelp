@@ -61,6 +61,7 @@ class Profile extends Component{
               Upcoming Jobs: ...
 
             </Card.Text>
+            <Card.Link href="/profile">Edit Profile</Card.Link>
           </Card.Body>
           </Card>
         </div>

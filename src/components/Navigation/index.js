@@ -19,30 +19,30 @@ const Navigation = () => (
   </div>
 )
 const NavigationNonAuth = () => (
-  <Navbar bg="light" variant="light">
+  <Navbar bg="light" variant="light" className="bg-light justify-content-between">
     <Navbar.Brand as={Link} to={ROUTES.HOME}>HelpMe</Navbar.Brand>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl type="text" placeholder="Search" className="mr-auto" />
           <Button variant="outline-primary">Search</Button>
         </Form>
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} to={ROUTES.SIGN_IN}>Login</Nav.Link>
+        <Nav className="mr-sm-2">
+        <Nav.Link as={Link} to={ROUTES.SIGN_IN}>Login</Nav.Link>
         </Nav>
     </Navbar>
 )
 
+
 const NavigationAuth = () => (
-  <Navbar bg="light" variant="light">
+  <Navbar bg="light" variant="light" className="bg-light justify-content-between">
     <Navbar.Brand as={Link} to={ROUTES.HOME}>HelpMe</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to={ROUTES.PROFILE}>Profile</Nav.Link>
           <Nav.Link as={Link} to={ROUTES.USERS}>Userlist</Nav.Link>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl type="text" placeholder="Search" className="mr-auto" />
           <Button variant="outline-primary">Search</Button>
         </Form>
-        <Nav className="mr-auto">
+        <Nav className="mr-sm-2">
           <SignOutButton/>
         </Nav>
     </Navbar>
