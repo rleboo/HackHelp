@@ -26,7 +26,6 @@ class EditProfile extends Component {
   onSubmit = event => {
     const { description, gender, mobile } = this.state;
 
-    console.log("Fuck");
     // Get the userid information 
     this.props.firebase.auth.onAuthStateChanged(function(user) {
       if (user) {
