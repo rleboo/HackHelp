@@ -11,6 +11,7 @@ import SignUpPage from '../SignUp/SignUp.js';
 import HomePage from '../Home';
 import Profile from '../Profile/Profile.js'
 import Login from '../Login/Login.js'
+import OrgProfile from '../OrgProfile/OrgProfile.js'
 import EditProfile from '../EditProfile/EditProfile.js'
 import UploadJobs from '../UploadJobs/UploadJobs.js'
 import UserPoints from '../UserPoints/UserPoints.js'
@@ -57,7 +58,7 @@ class App extends Component{
             <Route exact path='/Signup' component={SignUpPage} />
             <Route exact path='/UploadJobs' component={UploadJobs} />
             <Route exact path='/UserPoints' component={UserPoints} />
-            <Route exact path='/Users' component={UsersPage} />
+            <Route exact path= '/OrgProfile' component={OrgProfile} />
 
               <Route render={function () {
                 return <p>Not found</p>
