@@ -21,14 +21,13 @@ const Navigation = () => (
 const NavigationNonAuth = () => (
   <Navbar bg="light" variant="light">
     <Navbar.Brand as={Link} to={ROUTES.HOME}>HelpMe</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} to={ROUTES.HOME}>Home</Nav.Link>
-          <Nav.Link as={Link} to={ROUTES.SIGN_IN}>Login</Nav.Link>
-        </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-primary">Search</Button>
         </Form>
+        <Nav className="mr-auto">
+          <Nav.Link as={Link} to={ROUTES.SIGN_IN}>Login</Nav.Link>
+        </Nav>
     </Navbar>
 )
 
@@ -36,15 +35,16 @@ const NavigationAuth = () => (
   <Navbar bg="light" variant="light">
     <Navbar.Brand as={Link} to={ROUTES.HOME}>HelpMe</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to={ROUTES.HOME}>Home</Nav.Link>
           <Nav.Link as={Link} to={ROUTES.PROFILE}>Profile</Nav.Link>
           <Nav.Link as={Link} to={ROUTES.USERS}>Userlist</Nav.Link>
-          <SignOutButton/>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-primary">Search</Button>
         </Form>
+        <Nav className="mr-auto">
+          <SignOutButton/>
+        </Nav>
     </Navbar>
 )
 export default Navigation;

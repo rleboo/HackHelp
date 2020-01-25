@@ -38,10 +38,11 @@ class EditProfile extends Component {
         }).then(() => {
           this.setState({ ...INITIAL_STATE });
           //Reset the intial state
-          this.props.history.push(ROUTES.HOME);
+          this.props.history.push('/');
         }).catch(error => {
           this.setState({ error });
         });
+      
       }
     }.bind(this));
     // Bind "this" to this function 
@@ -74,7 +75,7 @@ class EditProfile extends Component {
     return (
       <span className = "EditProfile">
       <Card border="primary">
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} action={'/'}>
         
       <FormGroup controlId="description" bsSize="large">
         <FormLabel>Description:</FormLabel>
